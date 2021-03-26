@@ -1,0 +1,19 @@
+{
+  "name": "interview-mania",
+  "version": "1.0.0",
+  "description": "A quiz application ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angeleefshaw/interview-mania.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/angeleefshaw/interview-mania/issues"
+  },
+  "homepage": "https://github.com/angeleefshaw/interview-mania#readme"
+}
