@@ -1,0 +1,26 @@
+{
+  "development": {
+    "username": "essujehbirit5hx8",
+    "password": "q20oi17x8vnju3zl",
+    "database": "n5r6eamymguiqn6q",
+    "host": "vkh7buea61avxg07.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "port": 3306,
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "root",
+    "password": "somethingsimple",
+    "database": "interview_mania",
+    "host": "local",
+    "port": 3006,
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "root",
+    "password": "somethingsimple",
+    "database": "interview_mania",
+    "host": "local",
+    "port": 3006,
+    "dialect": "mysql"
+  }
+}
