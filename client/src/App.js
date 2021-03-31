@@ -1,10 +1,13 @@
-import Landing from './Pages/Landing';
+import Main from "./Pages/Main";
+import Landing from "./Pages/Landing";
+import Container from "react-bootstrap/Container";
+
 
 function App() {
 	return (
-		<div className="App">
-			<Landing />
-		</div>
+		<Container>
+			<Main/>
+		</Container>
 	);
 }
 
