@@ -1,0 +1,38 @@
+.scores-header {
+	text-align: center;
+}
+
+.pure-form {
+	height: 100px;
+}
+
+input {
+	height: 25px;
+	margin: 10px;
+}
+
+.row {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.column {
+	display: flex;
+	flex-direction: column;
+}
+
+li {
+	list-style: none;
+	text-align: center;
+	align-content: center;
+	width: 225px;
+	height: 75px;
+	border: 2px solid pink;
+	border-radius: 80px / 80px;
+}
+
+li:hover {
+	transform: scale(1.1);
+}

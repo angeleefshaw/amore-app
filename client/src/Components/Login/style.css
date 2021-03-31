@@ -1,0 +1,23 @@
+.login-card {
+	height: 300px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+fieldset {
+	border: none !important;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.pure-control-group {
+	margin: 5px;
+}
+
+#aligned-name,
+#aligned-password {
+	height: 30px;
+	margin: 10px;
+}

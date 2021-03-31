@@ -12,13 +12,13 @@ function Landing() {
 			<Router>
 				<Navbar />
 				<Switch>
-					<Route path="/">
+					<Route exact path="/">
 						<Jumbotron />
 					</Route>
-					<Route path="/login">
+					<Route exact path="/Login">
 						<Login />
 					</Route>
-					<Route path="/signup">
+					<Route exact path="/Signup">
 						<Signup />
 					</Route>
 				</Switch>

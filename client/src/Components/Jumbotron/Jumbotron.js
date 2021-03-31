@@ -1,7 +1,8 @@
 import React from 'react';
+import './style.css';
 
 function Jumbotron() {
-	return <h1>Jumbotron Here</h1>;
+	return <div className="jumbotron">INTERVIEW MANIA</div>;
 }
 
 export default Jumbotron;
