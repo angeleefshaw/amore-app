@@ -1,8 +1,9 @@
 const express = require('express');
 var session = require('express-session');
-const routes = require('./routes');
 var passport = require('./config-2/passport');
 const path = require('path');
+const routes = require("./routes");
+
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -21,12 +22,8 @@ app.use(session({ secret: 'keyboard cat', resave: true, saveUninitialized: true 
 app.use(passport.initialize());
 app.use(passport.session());
 
-// Define API routes here
 
-//routes
-// require("./routes/routes.js")(app);
-
-// Add routes, both API and view
+//Add routes, both API and view
 app.use(routes);
 
 // Send every other request to the React app
