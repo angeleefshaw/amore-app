@@ -1,10 +1,11 @@
 const express = require('express');
-const path = require('path');
 var session = require('express-session');
+const routes = require('./routes');
 var passport = require('./config-2/passport');
+const path = require('path');
 
-const PORT = process.env.PORT || 3001;
 const app = express();
+const PORT = process.env.PORT || 3001;
 
 // Requiring our models for syncing
 var db = require('./models');
@@ -26,7 +27,7 @@ app.use(passport.session());
 // require("./routes/routes.js")(app);
 
 // Add routes, both API and view
-// app.use(routes);
+app.use(routes);
 
 // Send every other request to the React app
 // Define any API routes before this runs
