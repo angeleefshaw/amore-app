@@ -10,7 +10,7 @@ A web development quiz application designed to prepare users for web development
   3. [License](#License)
   4. [Contributing](#Contributing)
   5. [Questions](#Questions)
-  6. [Special Thanks](#Special Thanks)
+  6. [Thanks](#Thanks)
   
   ## Introduction
   
@@ -33,4 +33,4 @@ A web development quiz application designed to prepare users for web development
   ## Questions
   
   
-  ##Special Thanks
+  ##Thanks
