@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 var session = require('express-session');
-var passport = require('./config/passport');
+var passport = require('./config-2/passport');
 
 const PORT = process.env.PORT || 3001;
 const app = express();
