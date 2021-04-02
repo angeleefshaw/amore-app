@@ -1,11 +1,12 @@
 const express = require('express');
-const path = require('path');
 var session = require('express-session');
 var passport = require('./config-2/passport');
+const path = require('path');
 const routes = require("./routes");
 
-const PORT = process.env.PORT || 3001;
+
 const app = express();
+const PORT = process.env.PORT || 3001;
 
 // Requiring our models for syncing
 var db = require('./models');
@@ -20,6 +21,7 @@ if (process.env.NODE_ENV === 'production') {
 app.use(session({ secret: 'keyboard cat', resave: true, saveUninitialized: true }));
 app.use(passport.initialize());
 app.use(passport.session());
+
 
 //Add routes, both API and view
 app.use(routes);
