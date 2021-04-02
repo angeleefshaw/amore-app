@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Navigation from '../Components/Navigation/Navigation';
-import Header from '../Components/Header/Header';
+import Navbar from '../Components/Navbar/Navbar';
+import Jumbotron from '../Components/Jumbotron/Jumbotron';
 import Login from '../Components/Login/Login';
 import Signup from '../Components/Signup/Signup';
 import Footer from '../Components/Footer/Footer';
@@ -10,15 +10,15 @@ function Landing() {
 	return (
 		<div>
 			<Router>
-				<Navigation />
+				<Navbar />
 				<Switch>
-					<Route path="/">
-						<Header />
+					<Route exact path="/">
+						<Jumbotron />
 					</Route>
-					<Route path="/login">
+					<Route exact path="/Login">
 						<Login />
 					</Route>
-					<Route path="/signup">
+					<Route exact path="/Signup">
 						<Signup />
 					</Route>
 				</Switch>
