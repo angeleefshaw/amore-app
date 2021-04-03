@@ -16,8 +16,9 @@ function Login() {
 						<label htmlFor="aligned-password">Password</label>
 						<input type="password" id="aligned-password" placeholder="Password" />
 					</div>
-
-					<Button variant="outline-dark">Sign In</Button>
+					<Button variant="outline-dark" href="/main">
+						Sign In
+					</Button>
 				</fieldset>
 			</form>
 		</div>
