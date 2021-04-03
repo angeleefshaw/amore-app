@@ -20,8 +20,9 @@ function Signup() {
 						<label htmlFor="aligned-email">First Name</label>
 						<input type="First" id="aligned-First" placeholder="First Name" />
 					</div>
-
-					<Button variant="outline-dark">Let's Go</Button>
+					<Button variant="outline-dark" href="/main">
+						Let's Go!
+					</Button>
 				</fieldset>
 			</form>
 		</div>
