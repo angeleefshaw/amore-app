@@ -14,9 +14,9 @@ class Questions extends Component {
 
   fetchQuestions = () => {
 
-    // API.getQuestion(this.props.topic).then((res) => { console.log (res)});
-    // // query endpoint and return the questions arra , have to set it into state.
-    // // 
+    API.getQuestion(this.props.topic).then((res) => { console.log (res)});
+    // query endpoint and return the questions array , have to set it into state.
+    
     const questions = [
       {
         question: "What is 2+2?",

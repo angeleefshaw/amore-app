@@ -1,5 +1,5 @@
 
-const db = require("../models/answers");
+const db = require("../models/index");
 
 // Defining methods for the booksController
 module.exports = {

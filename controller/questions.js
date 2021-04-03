@@ -1,5 +1,5 @@
 
-const db = require("../models/questions");
+const db = require("../models/index");
 
 // Defining methods for the questionsController
 module.exports = {
