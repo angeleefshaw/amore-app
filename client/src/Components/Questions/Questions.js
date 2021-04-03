@@ -14,9 +14,9 @@ class Questions extends Component {
 
   fetchQuestions = () => {
 
-    API.getQuestion(this.props.topic).then((res) => { console.log (res)});
-    // Query the endpoint and return the questions array and set it into state.
-    // Instead for now, we are populating mock data from a simple JSON structure.
+    // API.getQuestion(this.props.topic).then((res) => { console.log (res)});
+    // // query endpoint and return the questions arra , have to set it into state.
+    // // 
     const questions = [
       {
         question: "What is 2+2?",
@@ -91,6 +91,7 @@ class Questions extends Component {
 
   incrementScore = () => {
     this.setState({ score: this.state.score + 1 });
+
   };
 
   handleSubmit = () => {

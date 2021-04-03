@@ -15,6 +15,13 @@ if (process.env.NODE_ENV === 'production') {
 	app.use(express.static('client/build'));
 }
 
+// Enable CORS
+app.use(function (req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
 // Add routes, both API and view
 app.use(routes);
 
@@ -31,12 +38,12 @@ app.use(passport.session());
 // 	res.sendFile(path.join(__dirname, './client/build/index.html'));
 // });
 
-// db.sequelize.sync({ force: false }).then(function() {
-// 	app.listen(PORT, function() {
-// 		console.log('App listening on PORT ' + PORT);
-// 	});
-// });
-
-app.listen(PORT, function() {
-	console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
+db.sequelize.sync({ force: false }).then(function() {
+	app.listen(PORT, function() {
+		console.log('App listening on PORT ' + PORT);
+	});
 });
+
+// app.listen(PORT, function() {
+// 	console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
+// });
