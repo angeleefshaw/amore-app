@@ -6,7 +6,7 @@ const answersController = require("../../controller/answers");
 // Matches with "/api/question/:id"
 router.route("/:id")
   .get(questionsController.findByTopiId)
-  .get(answersController.findAnswersByQuestion)
+  // .get(answersController.findAnswersByQuestion)
   
 
 module.exports = router;
