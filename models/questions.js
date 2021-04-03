@@ -12,6 +12,7 @@ module.exports = function(sequelize, DataTypes) {
         Questions.hasMany(models.Answers)
         Questions.belongsTo(models.Quizzes, {
             foreignKey : {
+                name: "topic_id",
                 allowNull: false
             }
         });
