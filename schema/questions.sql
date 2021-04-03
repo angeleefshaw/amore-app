@@ -11,6 +11,5 @@ topic_id int NOT NULL,
 );
 
 
-
 INSERT INTO questions (question_id, question, topic_id)
 VALUES (1, 'Which of the following function joins all elements of an array into a string?', 1);
