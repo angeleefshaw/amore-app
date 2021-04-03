@@ -1,3 +1,4 @@
+import React from "react"
 import Main from "./Pages/Main";
 import Landing from "./Pages/Landing";
 import Container from "react-bootstrap/Container";
