@@ -1,7 +1,30 @@
 import React from "react";
 import {Card, CardDeck, Button} from "react-bootstrap";
+import API from "../../utils/API";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  useParams
+} from "react-router-dom";
 
 function Topic () {
+
+
+//gets all questions for quiz by taking in topic id
+  function getQuiz(id) {
+    API.getQuestion(id)
+    .then(res => 
+      console.log(res)
+      )
+      .catch(err => console.log(err))
+  };
+
+  //Will need to loop through all questions, render one for each page?
+
+  
+
 return (
   <CardDeck>
   <Card>
@@ -10,7 +33,10 @@ return (
       <Card.Text>
         REACT
       </Card.Text>
-      <Button variant="primary">Take the Quiz</Button>
+      <Link to="/question">
+        <Button variant="primary" onClick={() => getQuiz(1)}>Take the Quiz</Button>
+
+      </Link>
     </Card.Body>
   </Card>
   <Card>
@@ -19,7 +45,10 @@ return (
       <Card.Text>
         Node.js
       </Card.Text>
-      <Button variant="primary">Take the Quiz</Button>
+      <Link to="/question">
+        <Button variant="primary" onClick={() => getQuiz(2)}>Take the Quiz</Button>
+
+      </Link>
     </Card.Body>
   </Card>
   <Card>
@@ -28,7 +57,10 @@ return (
       <Card.Text>
         Javascript
       </Card.Text>
-      <Button variant="primary">Take the Quiz</Button>
+      <Link to="/question">
+        <Button variant="primary" onClick={() => getQuiz(3)}>Take the Quiz</Button>
+
+      </Link>
     </Card.Body>
   </Card>
 </CardDeck>

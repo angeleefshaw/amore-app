@@ -3,7 +3,7 @@ const db = require("../models");
 
 // Defining methods for the questionsController
 module.exports = {
-  findByTopiId: function(req, res) {
+  findByTopicId: function(req, res) {
     console.log(db);
     db.Questions
       .findAll(
@@ -18,4 +18,3 @@ module.exports = {
   }, 
 };
 
-//Will need to loop through all questions, render one for each page?
