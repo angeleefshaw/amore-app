@@ -28,35 +28,35 @@ function Topic () {
 return (
   <CardDeck>
   <Card>
-    <Card.Img variant="top" src="holder.js/100px160" />
+    <Card.Img />
     <Card.Body>
       <Card.Text>
         REACT
       </Card.Text>
-      <Link to="/quiz">
+      <Link to="/quiz/3">
         <Button variant="primary" onClick={() => getQuiz(1)}>Take the Quiz</Button>
       </Link>
     </Card.Body>
   </Card>
   <Card>
-    <Card.Img variant="top" src="holder.js/100px160" />
+    <Card.Img />
     <Card.Body>
       <Card.Text>
         Node.js
       </Card.Text>
-      <Link to="/quiz">
+      <Link to="/quiz/2">
         <Button variant="primary" onClick={() => getQuiz(2)}>Take the Quiz</Button>
 
       </Link>
     </Card.Body>
   </Card>
   <Card>
-    <Card.Img variant="top" src="holder.js/100px160" />
+    <Card.Img />
     <Card.Body>
       <Card.Text>
         Javascript
       </Card.Text>
-      <Link to="/quiz">
+      <Link to="/quiz/1">
         <Button variant="primary" onClick={() => getQuiz(3)}>Take the Quiz</Button>
 
       </Link>
