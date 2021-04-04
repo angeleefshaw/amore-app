@@ -3,7 +3,7 @@ const questionsController = require("../../controller/questions");
 const answersController = require("../../controller/answers");
 
 
-// Matches with "/api/question/:id"
+// Matches with "/api/quiz/:id"
 router.route("/:id")
   .get(questionsController.findByTopicId);
 
