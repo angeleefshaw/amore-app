@@ -1,9 +1,5 @@
 import axios from "axios";
 
-// setting environment 
-// const local = true;
-// const env = local ? "http://localhost:3001" : "";
-
 export default {
   // Gets all questions with a topic id of (id)
   getQuestion: function(id) {
