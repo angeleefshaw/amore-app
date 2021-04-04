@@ -2,6 +2,6 @@ const router = require("express").Router();
 const questionRoutes = require("./questions");
 
 // quizzes routes
-router.use("/question", questionRoutes);
+router.use("/quiz", questionRoutes);
 
 module.exports = router;

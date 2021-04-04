@@ -33,9 +33,8 @@ return (
       <Card.Text>
         REACT
       </Card.Text>
-      <Link to="/question">
+      <Link to="/quiz">
         <Button variant="primary" onClick={() => getQuiz(1)}>Take the Quiz</Button>
-
       </Link>
     </Card.Body>
   </Card>
@@ -45,7 +44,7 @@ return (
       <Card.Text>
         Node.js
       </Card.Text>
-      <Link to="/question">
+      <Link to="/quiz">
         <Button variant="primary" onClick={() => getQuiz(2)}>Take the Quiz</Button>
 
       </Link>
@@ -57,7 +56,7 @@ return (
       <Card.Text>
         Javascript
       </Card.Text>
-      <Link to="/question">
+      <Link to="/quiz">
         <Button variant="primary" onClick={() => getQuiz(3)}>Take the Quiz</Button>
 
       </Link>
