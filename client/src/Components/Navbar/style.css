@@ -5,4 +5,19 @@
 	margin: 15px;
 	padding: 10px;
 	justify-content: flex-end;
+	font-family: 'Source Code Pro', monospace;
 }
+
+.navbar-li a {
+	color: azure;
+	margin-right: 30px;
+	font-size: 1.25rem;
+	text-decoration: none;
+}
+
+.navbar-li a:hover {
+	text-decoration: none;
+	color: #E47676 ;
+}
+
+

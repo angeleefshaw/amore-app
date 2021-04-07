@@ -1,13 +1,13 @@
-import React from "react";
-import Jumbotron from "react-bootstrap/Jumbotron";
-
+import React from 'react';
 
 function Header() {
 	return (
-<Jumbotron>
-  <h1>Interview-Mania</h1>
-</Jumbotron>
-
+		<div>
+			<p className = "landing-intro"> Get interview ready with our interactive code quizzes</p>
+		</div>
+		
+			
+	  
 	)
 }
 

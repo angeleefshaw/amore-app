@@ -1,5 +1,4 @@
 import React from "react";
-import {Card, CardDeck, Button} from "react-bootstrap";
 import API from "../../utils/API";
 import {
   BrowserRouter as Router,
@@ -26,43 +25,32 @@ function Topic () {
   
 
 return (
-  <CardDeck>
-  <Card>
-    <Card.Img />
-    <Card.Body>
-      <Card.Text>
-        REACT
-      </Card.Text>
-      <Link to="/quiz/3">
-        <Button variant="primary" onClick={() => getQuiz(1)}>Take the Quiz</Button>
+  <div>
+    <div className = "quiz-btn-container">
+    <Link to="/quiz/3">
+          <button className="quiz-btn" onClick={() => getQuiz(2)}>
+            React
+          </button>
       </Link>
-    </Card.Body>
-  </Card>
-  <Card>
-    <Card.Img />
-    <Card.Body>
-      <Card.Text>
-        Node.js
-      </Card.Text>
+   
       <Link to="/quiz/2">
-        <Button variant="primary" onClick={() => getQuiz(2)}>Take the Quiz</Button>
+          <button className="quiz-btn" onClick={() => getQuiz(2)}>
+            Node.js
 
+            
+          </button>
       </Link>
-    </Card.Body>
-  </Card>
-  <Card>
-    <Card.Img />
-    <Card.Body>
-      <Card.Text>
-        Javascript
-      </Card.Text>
+        
       <Link to="/quiz/1">
-        <Button variant="primary" onClick={() => getQuiz(3)}>Take the Quiz</Button>
-
+          <button className="quiz-btn" onClick={() => getQuiz(2)}>
+            Javascript
+          </button>
       </Link>
-    </Card.Body>
-  </Card>
-</CardDeck>
+
+    </div>
+    
+
+</div>
 )
 }
 
