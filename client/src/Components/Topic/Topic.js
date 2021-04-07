@@ -24,7 +24,7 @@ function Topic () {
 
   
 
-return (
+
   <div>
     <div className = "quiz-btn-container">
     <Link to="/quiz/3">
