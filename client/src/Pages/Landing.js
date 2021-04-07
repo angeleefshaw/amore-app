@@ -4,7 +4,7 @@ import Navbar from '../Components/Navbar/Navbar';
 import Jumbotron from '../Components/Jumbotron/Jumbotron';
 import Login from '../Components/Login/Login';
 import Signup from '../Components/Signup/Signup';
-import Header from "../Components/Header/header"
+import Header from "../Components/Header/Header"
 import "../styles/landing.css"
 
 function Landing() {
