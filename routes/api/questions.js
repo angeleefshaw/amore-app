@@ -3,10 +3,11 @@ const questionsController = require("../../controller/questions");
 const answersController = require("../../controller/answers");
 
 
-// Matches with "/api/question/:id"
+// Matches with "/api/quiz/:id"
 router.route("/:id")
-  .get(questionsController.findByTopiId)
-  // .get(answersController.findAnswersByQuestion)
+  .get(questionsController.findByTopicId);
+
+  console.log("got to route")
   
 
 module.exports = router;

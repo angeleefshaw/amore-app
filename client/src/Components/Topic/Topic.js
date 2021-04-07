@@ -1,37 +1,56 @@
 import React from "react";
-import {Card, CardDeck, Button} from "react-bootstrap";
+import API from "../../utils/API";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  useParams
+} from "react-router-dom";
 
 function Topic () {
-return (
-  <CardDeck>
-  <Card>
-    <Card.Img variant="top" src="holder.js/100px160" />
-    <Card.Body>
-      <Card.Text>
-        REACT
-      </Card.Text>
-      <Button href="/quiz/3" variant="primary">Take the Quiz</Button>
-    </Card.Body>
-  </Card>
-  <Card>
-    <Card.Img variant="top" src="holder.js/100px160" />
-    <Card.Body>
-      <Card.Text>
-        Node.js
-      </Card.Text>
-      <Button href="/quiz/2" variant="primary">Take the Quiz</Button>
-    </Card.Body>
-  </Card>
-  <Card>
-    <Card.Img variant="top" src="holder.js/100px160" />
-    <Card.Body>
-      <Card.Text>
-        Javascript
-      </Card.Text>
-      <Button href="/quiz/1" variant="primary">Take the Quiz</Button>
-    </Card.Body>
-  </Card>
-</CardDeck>
+
+
+//gets all questions for quiz by taking in topic id
+  function getQuiz(id) {
+    API.getQuestion(id)
+    .then(res => 
+      console.log(res)
+      )
+      .catch(err => console.log(err))
+  };
+
+  //Will need to loop through all questions, render one for each page?
+
+  
+
+
+  <div>
+    <div className = "quiz-btn-container">
+    <Link to="/quiz/3">
+          <button className="quiz-btn" onClick={() => getQuiz(2)}>
+            React
+          </button>
+      </Link>
+   
+      <Link to="/quiz/2">
+          <button className="quiz-btn" onClick={() => getQuiz(2)}>
+            Node.js
+
+            
+          </button>
+      </Link>
+        
+      <Link to="/quiz/1">
+          <button className="quiz-btn" onClick={() => getQuiz(2)}>
+            Javascript
+          </button>
+      </Link>
+
+    </div>
+    
+
+</div>
 )
 }
 

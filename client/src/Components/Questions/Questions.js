@@ -14,6 +14,8 @@ class Questions extends Component {
 
   fetchQuestions = () => {
 
+    API.getAnswers(this.props.topic).then((res) => { console.log (res)});
+
     API.getQuestion(this.props.topic).then((res) => { console.log (res)});
     // query endpoint and return the questions array , have to set it into state.
     
