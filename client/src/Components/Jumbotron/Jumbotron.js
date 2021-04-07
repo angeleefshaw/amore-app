@@ -1,8 +1,17 @@
 import React from 'react';
-import './style.css';
 
 function Jumbotron() {
-	return <div className="jumbotron">INTERVIEW MANIA</div>;
+	return (
+		<div>
+			<div className="box  jumbo-container">
+				<h1 className = "header  main-header" >INTERVIEW MANIA</h1>
+			</div>
+
+		</div>
+		
+			
+	  
+	)
 }
 
 export default Jumbotron;

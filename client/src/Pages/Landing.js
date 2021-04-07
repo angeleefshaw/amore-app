@@ -4,7 +4,8 @@ import Navbar from '../Components/Navbar/Navbar';
 import Jumbotron from '../Components/Jumbotron/Jumbotron';
 import Login from '../Components/Login/Login';
 import Signup from '../Components/Signup/Signup';
-import Footer from '../Components/Footer/Footer';
+import Header from "../Components/Header/header"
+import "../styles/landing.css"
 
 function Landing() {
 	return (
@@ -13,7 +14,8 @@ function Landing() {
 				<Navbar />
 				<Switch>
 					<Route exact path="/">
-						<Jumbotron />
+						<Jumbotron/>
+						<Header />
 					</Route>
 					<Route exact path="/Login">
 						<Login />
@@ -22,7 +24,6 @@ function Landing() {
 						<Signup />
 					</Route>
 				</Switch>
-				<Footer />
 			</Router>
 		</div>
 	);
