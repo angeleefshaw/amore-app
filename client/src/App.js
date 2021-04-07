@@ -14,7 +14,7 @@ function App() {
 			<Route exact path="/main">
 				<Main />
 			</Route>
-			<Route exact path="/quiz">
+			<Route exact path="/quiz/:id">
 				<Container>
 					<Quiz />
 				</Container>

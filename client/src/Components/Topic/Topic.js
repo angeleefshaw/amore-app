@@ -10,7 +10,7 @@ return (
       <Card.Text>
         REACT
       </Card.Text>
-      <Button variant="primary">Take the Quiz</Button>
+      <Button href="/quiz/3" variant="primary">Take the Quiz</Button>
     </Card.Body>
   </Card>
   <Card>
@@ -19,7 +19,7 @@ return (
       <Card.Text>
         Node.js
       </Card.Text>
-      <Button variant="primary">Take the Quiz</Button>
+      <Button href="/quiz/2" variant="primary">Take the Quiz</Button>
     </Card.Body>
   </Card>
   <Card>
@@ -28,7 +28,7 @@ return (
       <Card.Text>
         Javascript
       </Card.Text>
-      <Button variant="primary">Take the Quiz</Button>
+      <Button href="/quiz/1" variant="primary">Take the Quiz</Button>
     </Card.Body>
   </Card>
 </CardDeck>
