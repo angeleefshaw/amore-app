@@ -32,7 +32,7 @@ function App() {
 				/>
 				<Route exact={true} path="/signup-page" component={Signup} />
 				<ProtectedRoute exact={true} path="/main" authenticated={authenticated} component={Main} />
-				<ProtectedRoute exact={true} path="/quiz/:id" authenticated={authenticated} component={Quiz} />
+				<Route exact={true} path="/quiz/:id" authenticated={authenticated} component={Quiz} />
 				<ProtectedRoute exact={true} path="/scoreboard" authenticated={authenticated} component={ScoreBoard} />
 			</Switch>
 		</Router>
