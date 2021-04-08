@@ -5,10 +5,10 @@ import './style.css';
 function Navbar() {
 	return (
 		<ul className="navbar-li">
-			<Link to="/Login">
+			<Link to="/login-page">
 				<li>Login</li>
 			</Link>
-			<Link to="/Signup">
+			<Link to="/signup-page">
 				<li>Sign Up</li>
 			</Link>
 		</ul>
