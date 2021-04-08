@@ -10,7 +10,6 @@ export default {
     return axios.get("/api/quiz/" + id);
   },
 
-  
   // Saves a score to the database
 //   saveScore: function(userScore) {
 //     return axios.post("/api/???", userScore);

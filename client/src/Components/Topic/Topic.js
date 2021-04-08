@@ -40,22 +40,6 @@ return(
 
 )
 
-//gets all questions for quiz by taking in topic id
-  // function getQuiz(id) {
-  //   API.getQuestion(id)
-  //   .then(res => 
-  //     console.log(res)
-  //     )
-  //     .catch(err => console.log(err))
-  // };
-
-  //Will need to loop through all questions, render one for each page?
-
-  
-
-
-
-
 
 }
 
