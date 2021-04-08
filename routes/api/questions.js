@@ -7,6 +7,9 @@ const answersController = require("../../controller/answers");
 router.route("/:id")
   .get(questionsController.findByTopicId);
 
+router.route("/:id")
+  .get(answersController.findAnswersByQuestion);
+
   console.log("got to route")
   
 

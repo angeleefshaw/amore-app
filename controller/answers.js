@@ -1,12 +1,12 @@
 
-const db = require("../models/index");
+const db = require("../models");
 
 // Defining methods for the booksController
 module.exports = {
 
  findAnswersByQuestion: function(req, res) {
      db.Answers
-     .findAll({where : {question_id: req.params.id}})
+     .findAll()
      .then(dbModel => res.render(dbModel))
     .catch(err => res.status(422).json(err));
 
