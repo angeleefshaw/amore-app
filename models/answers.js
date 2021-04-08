@@ -10,13 +10,8 @@ module.exports = function(sequelize, DataTypes) {
     });
 
     Answers.associate = models => {
-        Answers.belongsTo(models.Questions, {
-            foreignKey : {
-                name: "question_id",
-                allowNull: false
-            }
-        });
-    }
+        Answers.belongsTo(models.Questions,{foreignKey: 'question_Id', as: 'question'})
+    };
 
     return Answers
 };

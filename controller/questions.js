@@ -9,10 +9,11 @@ module.exports = {
       .findAll(
         {
         where : {topic_id: req.params.id}, 
-        include: [db.Answers],
+        include: [db.Answers], 
         attributes: ["question"]
         }
         ) 
+        // .then(db.Answers.findAll().then(dbAnswers => res.json(dbAnswers)))
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   }, 
