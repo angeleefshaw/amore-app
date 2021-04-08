@@ -14,66 +14,17 @@ class Questions extends Component {
 
   fetchQuestions = () => {
 
-    API.getQuestion(this.props.topic).then((res) => { console.log (res)});
-    
-    // query endpoint and return the questions array , have to set it into state.
-    
-    const questions = [
-      {
-        question: "What is 2+2?",
-        id: 1,
-        answers: [
-          {
-            id: 1,
-            answer: "4",
-            correct: true,
-          },
-          {
-            id: 2,
-            answer: "6",
-          },
-          {
-            id: 3,
-            answer: "8",
-          },
-          {
-            id: 4,
-            answer: "3",
-          },
-        ],
-      },
-      {
-        question: "What is 4+2?",
-        id: 2,
-        answers: [
-          {
-            id: 5,
-            answer: "6",
-            correct: true,
-          },
-          {
-            id: 6,
-            answer: "8",
-          },
-          {
-            id: 7,
-            answer: "9",
-          },
-          {
-            id: 8,
-            answer: "3",
-          },
-        ],
-      },
-    ];
-
-    this.setState({
-      questions,
+    API.getQuestion(this.props.topic).then((res) => {
+      console.log(res) 
+      this.setState({
+        questions: res.data,
+      });
     });
   };
 
   componentDidMount() {
     this.fetchQuestions();
+    console.log(this.state.questions)
   }
 
   handleSelection = (event) => {
@@ -92,22 +43,22 @@ class Questions extends Component {
 
   incrementScore = () => {
     this.setState({ score: this.state.score + 1 });
-
   };
 
   handleSubmit = () => {
-    console.log(this.state.score)
+    console.log(this.state.score);
+    // call api endpoint to store the score in the database
   }
 
   render() {
     return (
       <div>
-        {this.state.questions.map((question) => {
+        {this.state.questions.map((question, index) => {
           return (
-            <div key={question.id}>
+            <div key={index}>
               <h2>{question.question}</h2>
               <ListGroup>
-                {question.answers.map((answer) => {
+                {question.Answers.map((answer) => {
                   return (
                     <ListGroup.Item
                       key={answer.id}
@@ -123,6 +74,7 @@ class Questions extends Component {
           );
         })}
         <Button variant="primary" onClick={this.handleSubmit}>Submit</Button>
+        <p>{this.state.score}</p>
       </div>
     );
   }
