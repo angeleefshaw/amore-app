@@ -1,11 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { Redirect } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import axios from 'axios';
 import './login.css';
 
-function Login() {
+function Login(props) {
 	const [ loginUsername, setLoginUsername ] = useState('');
 	const [ loginPassword, setLoginPassword ] = useState('');
+	const [ authenticated, setAuthenticated ] = useState(props.authentication);
+
+	const [ redirect, setRedirect ] = useState(false);
+
+	useEffect(
+		() => {
+			console.log(redirect);
+		},
+		[ redirect ]
+	);
 
 	const login = () => {
 		axios
@@ -13,14 +24,22 @@ function Login() {
 				username: loginUsername,
 				password: loginPassword
 			})
-			.then(
-				function() {
-					window.location.href = '/Main';
-				}.catch(function(err) {
-					console.log(err);
-				})
-			);
+			.then((response) => {
+				console.log(response);
+				if (response.status === 200) {
+					props.setAuthentication(true);
+					setRedirect(true);
+				}
+			})
+			.catch((error) => {
+				alert('Incorrect username or password');
+				console.log(error);
+			});
 	};
+
+	if (redirect) {
+		return <Redirect to="/Main" />;
+	}
 
 	return (
 		<div className="login-card">
@@ -45,7 +64,7 @@ function Login() {
 							onChange={(e) => setLoginPassword(e.target.value)}
 						/>
 					</div>
-					<Button variant="outline-dark" href="/main" onClick={login}>
+					<Button variant="outline-dark" onClick={login}>
 						Sign In
 					</Button>
 				</fieldset>

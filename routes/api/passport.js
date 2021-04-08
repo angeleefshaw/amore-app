@@ -16,7 +16,6 @@ app.post('/login', passport.authenticate('local'), function(req, res) {
 // how we configured our Sequelize User Model. If the user is created successfully, proceed to log the user in,
 // otherwise send back an error
 app.post('/signup', function(req, res) {
-	console.log('passport js sign up post route');
 	db.User
 		.create({
 			username: req.body.username,

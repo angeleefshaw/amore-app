@@ -17,17 +17,16 @@ function Signup() {
 	);
 
 	const register = () => {
-		console.log('sign up page username and password', registerPassword, registerUsername);
 		axios
 			.post('/api/signup', {
 				username: registerUsername,
 				password: registerPassword
 			})
-			.then(function(response) {
+			.then(function() {
 				setRedirect(true);
-				// If there's an error, handle it by throwing up a bootstrap alert
 			})
 			.catch(function(err) {
+				alert('Username already taken! Try another');
 				console.log(err);
 			});
 	};
