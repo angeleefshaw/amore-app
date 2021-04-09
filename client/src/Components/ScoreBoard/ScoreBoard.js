@@ -10,7 +10,11 @@ function ScoreBoard() {
 	});
 
 	useEffect(() => {
-		Promise.all(API.getScores('react'), API.getScores('nodejs'), API.getScores('javascript')).then((results) => {
+		Promise.all([
+			API.getScores('react'),
+			API.getScores('nodejs'),
+			API.getScores('javascript')
+		]).then((results) => {
 			console.log(results);
 		});
 	}, []);
