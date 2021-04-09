@@ -1,7 +1,9 @@
 import React from "react";
 import { Component } from "react";
 import {ListGroup, Button} from "react-bootstrap";
+import { Link, withRouter } from "react-router-dom"; 
 import API from "../../utils/API";
+
 
 class Questions extends Component {
   constructor(props) {
@@ -46,9 +48,9 @@ class Questions extends Component {
   };
 
   handleSubmit = () => {
-    console.log(this.state.score);
-    // call api endpoint to store the score in the database
-  }
+    //api call to post score to databas and in the .then we have the below
+    this.props.history.push("/scores");
+    }
 
   render() {
     return (
@@ -73,11 +75,13 @@ class Questions extends Component {
             </div>
           );
         })}
-        <Button variant="primary" onClick={this.handleSubmit}>Submit</Button>
-        <p>{this.state.score}</p>
+         <p>Your Score is :{this.state.score}</p>
+          <Button onClick={this.handleSubmit}>ScoreBoard</Button>
+       
       </div>
     );
   }
 }
 
-export default Questions;
+
+export default withRouter(Questions);
