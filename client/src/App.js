@@ -47,7 +47,7 @@ function App() {
 					exact={true}
 					path="/scoreboard"
 					authenticated={authenticated}
-					component={authenticated ? Quiz : ScoreBoard}
+					component={authenticated ? ScoreBoard : Login}
 				/>
 			</Switch>
 		</Router>
