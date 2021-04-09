@@ -10,7 +10,7 @@ import ProtectedRoute from './Components/ProtectedRoute/ProtectedRoute';
 import ScoreBoard from './Components/ScoreBoard/ScoreBoard';
 
 function App() {
-	const [ authenticated, setAuthenticated ] = useState(false);
+	const [ authenticated, setAuthenticated ] = useState(true);
 
 	useEffect(
 		() => {
@@ -31,9 +31,24 @@ function App() {
 					)}
 				/>
 				<Route exact={true} path="/signup-page" component={Signup} />
-				<ProtectedRoute exact={true} path="/main" authenticated={authenticated} component={Main} />
-				<ProtectedRoute exact={true} path="/quiz/:id" authenticated={authenticated} component={Quiz} />
-				<ProtectedRoute exact={true} path="/scoreboard" authenticated={authenticated} component={ScoreBoard} />
+				<Route
+					exact={true}
+					path="/main"
+					authenticated={authenticated}
+					component={authenticated ? Main : Login}
+				/>
+				<Route
+					exact={true}
+					path="/quiz/:id"
+					authenticated={authenticated}
+					component={authenticated ? Quiz : Login}
+				/>
+				<Route
+					exact={true}
+					path="/scoreboard"
+					authenticated={authenticated}
+					component={authenticated ? Quiz : ScoreBoard}
+				/>
 			</Switch>
 		</Router>
 	);
