@@ -5,7 +5,7 @@ module.exports = function(sequelize, DataTypes) {
 			primaryKey: true,
 			type: DataTypes.INTEGER
         },
-        user_id: {
+        username: {
 			type: DataTypes.INTEGER
 		},
         quiz: {
