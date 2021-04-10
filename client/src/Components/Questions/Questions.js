@@ -1,6 +1,6 @@
 import React from "react";
 import { Component } from "react";
-import {ListGroup, Button} from "react-bootstrap";
+import {ListGroup, Button, PageItem} from "react-bootstrap";
 import { Link, withRouter } from "react-router-dom"; 
 import API from "../../utils/API";
 
@@ -48,9 +48,18 @@ class Questions extends Component {
   };
 
   handleSubmit = () => {
-    //api call to post score to databas and in the .then we have the below
-    this.props.history.push("/scores");
+
+    const scoreDetails = {
+      score: this.state.score,
+      username: this.state.username,
+      topic_id: this.props.topic,
     }
+  
+     API.saveScores(scoreDetails).then((res) => { 
+      //api call to post score to databas and in the .then we have the below
+      this.props.history.push("/scores");
+    });
+  };
 
   render() {
     return (
