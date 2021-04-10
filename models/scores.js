@@ -1,3 +1,4 @@
+
 module.exports = function(sequelize, DataTypes) {
 	var Scores = sequelize.define('Scores', {
 		id: {
@@ -16,16 +17,12 @@ module.exports = function(sequelize, DataTypes) {
 			type: DataTypes.INTEGER,
 			allowNull: false
 		}
-
-	});
+  });
 
     Scores.associate = models => {
         Scores.belongsTo(models.User, {foreignKey: 'username'}),
         Scores.belongsTo(models.Quizzes,  {foreignKey: 'topic_id'})
     }
 	
-
-    
-	
-	return Scores;
+  return Scores;
 };

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Redirect } from 'react-router-dom';
+import { Redirect, Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import axios from 'axios';
 import './style.css';
@@ -63,6 +63,9 @@ function Signup() {
 					</Button>
 				</fieldset>
 			</form>
+			<Link to="/">
+				<Button className="fixed-bottom">Exit</Button>
+			</Link>
 		</div>
 	);
 }

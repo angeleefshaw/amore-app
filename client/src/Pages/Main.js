@@ -1,13 +1,13 @@
 import React from "react";
 import Topic from "../Components/Topic/Topic";
 import Jumbotron from "../Components/Jumbotron/Jumbotron";
-import '../styles/main.css';
+import "../styles/main.css";
 import {Link} from "react-router-dom";
 
 function Main() {
 	return (
 		<div className="main">
-			<Link className="view-score-link" to="/view-scores">
+			<Link className="view-score-link" to="/scoreboard">
 				High Scores
 			</Link>
 			<Jumbotron />

@@ -1,10 +1,12 @@
 import React from "react";
 import { Component } from "react";
-import {ListGroup, Button} from "react-bootstrap";
+import {ListGroup, Button, PageItem} from "react-bootstrap";
+import { withRouter } from "react-router-dom"; 
 import API from "../../utils/API";
 
 class Questions extends Component {
   constructor(props) {
+    console.log(props);
     super(props);
     this.state = {
       questions: [],
@@ -46,9 +48,19 @@ class Questions extends Component {
   };
 
   handleSubmit = () => {
-    console.log(this.state.score);
-    // call api endpoint to store the score in the database
-  }
+    const scoreDetails = {
+      score: this.state.score,
+      username: 1,
+    };
+
+    console.log(scoreDetails);
+  
+     API.saveScores(scoreDetails).then((res) => { 
+      //api call to post score to databas and in the .then we have the below
+      console.log(res);
+      this.props.history.push("/scoreboard");
+    });
+  };
 
   render() {
     return (
@@ -73,11 +85,13 @@ class Questions extends Component {
             </div>
           );
         })}
-        <Button variant="primary" onClick={this.handleSubmit}>Submit</Button>
-        <p>{this.state.score}</p>
+         <p>Your Score is :{this.state.score}</p>
+          <Button onClick={this.handleSubmit}>Submit</Button>
+       
       </div>
     );
   }
 }
 
-export default Questions;
+
+export default withRouter(Questions);
