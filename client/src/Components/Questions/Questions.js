@@ -51,8 +51,8 @@ class Questions extends Component {
     const scoreDetails = {
       score: this.state.score,
       //un comment when the db includes topic_id
-      //topic_id: this.props.topic
-      // username: 1,
+      topic_id: this.props.topic
+      // username;
     };
 
     console.log(scoreDetails);
