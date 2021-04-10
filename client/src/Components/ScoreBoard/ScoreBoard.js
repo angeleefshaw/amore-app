@@ -4,15 +4,15 @@ import './style.css';
 import API from '../../utils/API';
 
 function ScoreBoard(props) {
-	const [ jsResults, setJsResults ] = useState({});
-	const [ nodejsResults, setNodejsResults ] = useState({});
-	const [ reactResults, setReactResults ] = useState({});
+	const [ jsResults, setJsResults ] = useState([]);
+	const [ nodejsResults, setNodejsResults ] = useState([]);
+	const [ reactResults, setReactResults ] = useState([]);
 
 	useEffect(() => {
 		Promise.all([ API.getScores(1), API.getScores(2), API.getScores(3) ]).then((results) => {
-			setJsResults(results[0]);
-			setNodejsResults(results[1]);
-			setReactResults(results[2]);
+			setJsResults(results[0].data);
+			setNodejsResults(results[1].data);
+			setReactResults(results[2].data);
 		});
 	}, []);
 
@@ -28,27 +28,27 @@ function ScoreBoard(props) {
 			<div className="row">
 				<div className="column">
 					<h1>React</h1>
-					<li className="scores-li">User 1</li>
-					<li className="scores-li">User 2</li>
-					<li className="scores-li">User 3</li>
-					<li className="scores-li">User 4</li>
-					<li className="scores-li">User 5</li>
+					{reactResults.map((result) => (
+						<li className="scores-li">
+							{result.username} {result.score}
+						</li>
+					))}
 				</div>
 				<div className="column">
 					<h1>Javascript</h1>
-					<li className="scores-li">User 1</li>
-					<li className="scores-li">User 2</li>
-					<li className="scores-li">User 3</li>
-					<li className="scores-li">User 4</li>
-					<li className="scores-li">User 5</li>
+					{jsResults.map((result) => (
+						<li className="scores-li">
+							{result.username} {result.score}
+						</li>
+					))}
 				</div>
 				<div className="column">
 					<h1>Node.js</h1>
-					<li className="scores-li">User 1</li>
-					<li className="scores-li">User 2</li>
-					<li className="scores-li">User 3</li>
-					<li className="scores-li">User 4</li>
-					<li className="scores-li">User 5</li>
+					{nodejsResults.map((result) => (
+						<li className="scores-li">
+							{result.username} {result.score}
+						</li>
+					))}
 				</div>
 			</div>
 		</div>
