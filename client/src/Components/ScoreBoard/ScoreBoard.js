@@ -16,9 +16,6 @@ function ScoreBoard(props) {
 		});
 	}, []);
 
-	console.log('js results: ', jsResults);
-	console.log('node results: ', nodejsResults);
-	console.log('react results: ', reactResults);
 
 	return (
 		<div className="scoreboard-page">
