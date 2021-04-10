@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from 'axios';
 
 export default {
   // Gets all questions with a topic id of (id)
@@ -15,4 +15,12 @@ export default {
   saveScores: function (scores) {
     return axios.post("/api/scores", scores);
   },
+  
+	getScores: function(id) {
+		return axios.get('/api/scores/' + id);
+	}
+	// Saves a score to the database
+	//   saveScore: function(userScore) {
+	//     return axios.post("/api/???", userScore);
+	//   }
 };

@@ -1,8 +1,5 @@
 const path = require('path');
 const router = require('express').Router();
-
-var isAuthenticated = require('../config/middleware/isAuthenticated');
-
 const apiRoutes = require('./api');
 
 // API Routes
@@ -14,5 +11,3 @@ router.use(function(req, res) {
 });
 
 module.exports = router;
-
-//-------------- Add middleware routes to check if a user is logged in -------------------

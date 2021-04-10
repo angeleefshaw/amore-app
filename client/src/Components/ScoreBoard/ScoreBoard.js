@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './style.css';
+import API from '../../utils/API';
 
 function ScoreBoard() {
 	const [ record, setRecord ] = useState({
@@ -8,6 +9,15 @@ function ScoreBoard() {
 		score: ''
 	});
 
+	useEffect(() => {
+		Promise.all([
+			API.getScores('react'),
+			API.getScores('nodejs'),
+			API.getScores('javascript')
+		]).then((results) => {
+			console.log(results);
+		});
+	}, []);
 	// when input values change, update the record
 	const handleChange = (e) => {
 		const { name, value } = e.target;
