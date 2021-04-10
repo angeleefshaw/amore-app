@@ -13,14 +13,12 @@ export default {
 
   //save scores
   saveScores: function (scores) {
+    console.log(scores);
     return axios.post("/api/scores", scores);
   },
-  
+
 	getScores: function(id) {
 		return axios.get('/api/scores/' + id);
 	}
-	// Saves a score to the database
-	//   saveScore: function(userScore) {
-	//     return axios.post("/api/???", userScore);
-	//   }
+	
 };

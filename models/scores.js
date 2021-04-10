@@ -5,11 +5,11 @@ module.exports = function (sequelize, DataTypes) {
       primaryKey: true,
       type: DataTypes.INTEGER,
     },
-		// needs to be string
+    // needs to be string
     username: {
       type: DataTypes.STRING,
     },
-		// need to be topic_id (and quizzes models needs to be associotd)
+    // need to be topic_id (and quizzes models needs to be associotd)
     // quiz: {
     //   type: DataTypes.STRING,
     //   allowNull: false,
@@ -25,13 +25,13 @@ module.exports = function (sequelize, DataTypes) {
   };
 
   Scores.associate = (models) => {
-  Scores.belongsTo(models.Quizzes, {
-    foreignKey : {
-        topic_id: DataTypes.INTEGER ,
-        allowNull: false
-    }
-});
-};
+    // Scores.belongsTo(models.Quizzes, {
+    //   foreignKey: {
+    //     topic_id: DataTypes.INTEGER,
+    //     allowNull: false,
+    //   },
+    // });
+  };
 
   return Scores;
 };

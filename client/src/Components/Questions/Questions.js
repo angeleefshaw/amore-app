@@ -1,12 +1,12 @@
 import React from "react";
 import { Component } from "react";
 import {ListGroup, Button, PageItem} from "react-bootstrap";
-import { Link, withRouter } from "react-router-dom"; 
+import { withRouter } from "react-router-dom"; 
 import API from "../../utils/API";
-
 
 class Questions extends Component {
   constructor(props) {
+    console.log(props);
     super(props);
     this.state = {
       questions: [],
@@ -48,16 +48,17 @@ class Questions extends Component {
   };
 
   handleSubmit = () => {
-
     const scoreDetails = {
       score: this.state.score,
-      username: this.state.username,
-      topic_id: this.props.topic,
-    }
+      username: 1,
+    };
+
+    console.log(scoreDetails);
   
      API.saveScores(scoreDetails).then((res) => { 
       //api call to post score to databas and in the .then we have the below
-      this.props.history.push("/scores");
+      console.log(res);
+      this.props.history.push("/scoreboard");
     });
   };
 
@@ -85,7 +86,7 @@ class Questions extends Component {
           );
         })}
          <p>Your Score is :{this.state.score}</p>
-          <Button onClick={this.handleSubmit}>ScoreBoard</Button>
+          <Button onClick={this.handleSubmit}>Submit</Button>
        
       </div>
     );

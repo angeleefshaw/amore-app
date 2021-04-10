@@ -7,7 +7,7 @@ import {Link} from "react-router-dom";
 function Main() {
 	return (
 		<div className="main">
-			<Link className="view-score-link" to="/view-scores">
+			<Link className="view-score-link" to="/scoreboard">
 				High Scores
 			</Link>
 			<Jumbotron />

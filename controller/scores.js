@@ -3,7 +3,8 @@ const db = require("../models");
 // Defining methods for the scoresController
 module.exports = {
 
-  createScores: function(req, res) {
+  saveScores: function(req, res) {
+    console.log(req.body);
     db.Scores
       .create(req.body)
       .then(dbModel => res.json(dbModel))
