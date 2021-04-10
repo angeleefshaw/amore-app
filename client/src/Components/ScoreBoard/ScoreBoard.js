@@ -3,7 +3,7 @@ import Logout from '../Logout/Logout';
 import './style.css';
 import API from '../../utils/API';
 
-function ScoreBoard() {
+function ScoreBoard(props) {
 	const [ jsResults, setJsResults ] = useState({});
 	const [ nodejsResults, setNodejsResults ] = useState({});
 	const [ reactResults, setReactResults ] = useState({});
@@ -22,7 +22,7 @@ function ScoreBoard() {
 
 	return (
 		<div className="scoreboard-page">
-			<Logout />
+			<Logout {...props} />
 			<h1 className="scores-header">Top 5</h1>
 			{/* Confitional Render based on state length amp through array1-3*/}
 			<div className="row">

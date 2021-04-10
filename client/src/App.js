@@ -8,16 +8,17 @@ import Login from './Components/Login/Login';
 import Signup from './Components/Signup/Signup';
 import ProtectedRoute from './Components/ProtectedRoute/ProtectedRoute';
 import ScoreBoard from './Components/ScoreBoard/ScoreBoard';
+import Axios from 'axios';
 
 function App() {
 	const [ authenticated, setAuthenticated ] = useState(false);
 
-	useEffect(
-		() => {
-			console.log('User authenticated? ', authenticated);
-		},
-		[ authenticated ]
-	);
+	// useEffect(
+	// 	() => {
+	// 		Axios.get('/api/user_data').then();
+	// 	},
+	// 	[ authenticated ]
+	// );
 
 	return (
 		<Router>
@@ -35,7 +36,7 @@ function App() {
 					exact={true}
 					path="/main"
 					authenticated={authenticated}
-					component={authenticated ? Main : Login}
+					component={authenticated ? () => <Main setAuthenticated={setAuthenticated} /> : Login}
 				/>
 				<Route
 					exact={true}
@@ -47,7 +48,7 @@ function App() {
 					exact={true}
 					path="/scoreboard"
 					authenticated={authenticated}
-					component={authenticated ? ScoreBoard : Login}
+					component={authenticated ? () => <ScoreBoard setAuthenticated={setAuthenticated} /> : Login}
 				/>
 			</Switch>
 		</Router>
