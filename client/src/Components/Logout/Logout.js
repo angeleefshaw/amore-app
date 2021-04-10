@@ -1,21 +1,33 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { Redirect } from 'react-router-dom';
 import axios from 'axios';
 
-function Logout() {
+function Logout(props) {
+	// const [ redirect, setRedirect ] = useState(false);
+
+	// useEffect(
+	// 	() => {
+	// 		console.log(redirect);
+	// 	},
+	// 	[ redirect ]
+	// );
+
 	const logout = () => {
 		axios
-			.post('/api/logout')
+			.get('/api/logout')
 			.then(function() {
-				console.log('logging out...');
+				props.setAuthenticated(false);
 			})
-			.catch(function(err) {
-				console.log(err);
+			.catch((error) => {
+				console.log(error);
 			});
 	};
 
 	return (
-		<div onClick={logout} className="logout-link">
-			Logout
+		<div>
+			<button onClick={logout} className="logout-link">
+				Logout
+			</button>
 		</div>
 	);
 }

@@ -32,8 +32,28 @@ app.post('/signup', function(req, res) {
 
 // Route for logging user out
 app.get('/logout', function(req, res) {
-	req.logout();
-	res.redirect('/');
+	console.log('logout is hit');
+	req.session.destroy((err) => {
+		if (err) return next(err);
+
+		req.logout();
+
+		res.sendStatus(200);
+	});
+});
+
+// Route for getting some data about our user to be used client side
+app.get('/user_data', function(req, res) {
+	if (!req.user) {
+		// The user is not logged in, send back an empty object
+		res.json(null);
+	} else {
+		// Otherwise send back the user's usernmae and id
+		res.json({
+			username: req.user.username,
+			id: req.user.id
+		});
+	}
 });
 
 module.exports = app;
