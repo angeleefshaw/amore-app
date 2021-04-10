@@ -1,9 +1,11 @@
+
 import React from 'react';
 import Topic from '../Components/Topic/Topic';
 import Logout from '../Components/Logout/Logout';
 import Jumbotron from '../Components/Jumbotron/Jumbotron';
 import '../styles/main.css';
 import { Link } from 'react-router-dom';
+
 
 function Main() {
 	return (
@@ -14,7 +16,6 @@ function Main() {
 				</Link>
 				<Logout />
 			</div>
-
 			<Jumbotron />
 			<div className="mainpage-quiz-intro-container">
 				<p className="mainpage-quiz-intro">Prepare for your interview by selecting a quiz below.</p>

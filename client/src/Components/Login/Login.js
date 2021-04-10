@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Redirect } from 'react-router-dom';
+import { Redirect, Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import axios from 'axios';
 import './login.css';
@@ -69,6 +69,9 @@ function Login(props) {
 					</Button>
 				</fieldset>
 			</form>
+			<Link to="/">
+				<Button className="fixed-bottom">Exit</Button>
+			</Link>
 		</div>
 	);
 }
