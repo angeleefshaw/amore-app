@@ -5,6 +5,8 @@ module.exports = {
 
   saveScores: function(req, res) {
     console.log(req.body);
+    req.body.username = req.user.username;
+    console.log(req.body);
     db.Scores
       .create(req.body)
       .then(dbModel => res.json(dbModel))

@@ -50,7 +50,9 @@ class Questions extends Component {
   handleSubmit = () => {
     const scoreDetails = {
       score: this.state.score,
-      username: 1,
+      //un comment when the db includes topic_id
+      //topic_id: this.props.topic
+      // username: 1,
     };
 
     console.log(scoreDetails);
@@ -64,10 +66,10 @@ class Questions extends Component {
 
   render() {
     return (
-      <div>
+      <div className="mt-5 mb-5">
         {this.state.questions.map((question, index) => {
           return (
-            <div key={index}>
+            <div key={index} className="mb-5">
               <h2>{question.question}</h2>
               <ListGroup>
                 {question.Answers.map((answer) => {
@@ -85,8 +87,8 @@ class Questions extends Component {
             </div>
           );
         })}
-         <p>Your Score is :{this.state.score}</p>
-          <Button onClick={this.handleSubmit}>Submit</Button>
+         <p className="score-tag">Your Score is :{this.state.score}</p>
+          <Button variant="outline-light" onClick={this.handleSubmit}>Submit</Button>
        
       </div>
     );
