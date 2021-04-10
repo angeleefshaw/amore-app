@@ -64,7 +64,7 @@ function Signup() {
 				</fieldset>
 			</form>
 			<Link to="/">
-				<Button className="fixed-bottom">Exit</Button>
+				<Button variant="outline-light" className="fixed-bottom">Exit</Button>
 			</Link>
 		</div>
 	);
