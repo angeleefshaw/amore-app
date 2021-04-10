@@ -9,11 +9,7 @@ function ScoreBoard() {
 	const [ reactResults, setReactResults ] = useState({});
 
 	useEffect(() => {
-		Promise.all([
-			API.getScores('javascript'),
-			API.getScores('nodejs'),
-			API.getScores('react')
-		]).then((results) => {
+		Promise.all([ API.getScores(1), API.getScores(2), API.getScores(3) ]).then((results) => {
 			setJsResults(results[0]);
 			setNodejsResults(results[1]);
 			setReactResults(results[2]);
