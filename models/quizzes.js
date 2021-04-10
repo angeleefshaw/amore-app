@@ -10,6 +10,8 @@ module.exports = function(sequelize, DataTypes) {
 
     Quizzes.associate = models => {
         Quizzes.hasMany(models.Questions)
+        Quizzes.hasMany(models.Scores)
+
     }
 
     return Quizzes
