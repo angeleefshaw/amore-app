@@ -32,8 +32,14 @@ app.post('/signup', function(req, res) {
 
 // Route for logging user out
 app.get('/logout', function(req, res) {
-	req.logout();
-	res.redirect('/');
+	console.log('logout is hit');
+	req.session.destroy((err) => {
+		if (err) return next(err);
+
+		req.logout();
+
+		res.sendStatus(200);
+	});
 });
 
 module.exports = app;
