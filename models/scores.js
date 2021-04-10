@@ -6,10 +6,10 @@ module.exports = function(sequelize, DataTypes) {
 			type: DataTypes.INTEGER
         },
         username: {
-			type: DataTypes.INTEGER
+			type: DataTypes.STRING
 		},
-        quiz: {
-			type: DataTypes.STRING,
+        topic_id: {
+			type: DataTypes.INTEGER,
 			allowNull: false
 		},
 		score: {
@@ -20,7 +20,8 @@ module.exports = function(sequelize, DataTypes) {
 	});
 
     Scores.associate = models => {
-        Scores.belongsTo(models.User)
+        Scores.belongsTo(models.User, {foreignKey: 'username'}),
+        Scores.belongsTo(models.Quizzes,  {foreignKey: 'topic_id'})
     }
 	
 
