@@ -1,53 +1,34 @@
 import React, { useState, useEffect } from 'react';
+import Logout from '../Logout/Logout';
 import './style.css';
 import API from '../../utils/API';
 
 function ScoreBoard() {
-	const [ record, setRecord ] = useState({
-		quiz: '',
-		name: '',
-		score: ''
-	});
+	const [ jsResults, setJsResults ] = useState({});
+	const [ nodejsResults, setNodejsResults ] = useState({});
+	const [ reactResults, setReactResults ] = useState({});
 
 	useEffect(() => {
 		Promise.all([
-			API.getScores('react'),
+			API.getScores('javascript'),
 			API.getScores('nodejs'),
-			API.getScores('javascript')
+			API.getScores('react')
 		]).then((results) => {
-			console.log(results);
+			setJsResults(results[0]);
+			setNodejsResults(results[1]);
+			setReactResults(results[2]);
 		});
 	}, []);
-	// when input values change, update the record
-	const handleChange = (e) => {
-		const { name, value } = e.target;
-		setRecord({
-			...record,
-			[name]: value
-		});
-	};
 
-	// console log the record for now, will eventually send to db
-	const handleSubmit = (event) => {
-		event.preventDefault();
-		console.log(record);
-	};
+	console.log('js results: ', jsResults);
+	console.log('node results: ', nodejsResults);
+	console.log('react results: ', reactResults);
 
 	return (
-		<div>
+		<div className="scoreboard-page">
+			<Logout />
 			<h1 className="scores-header">Top 5</h1>
-			{/* Form to Gather user score and send to scores db*/}
-			<form className="pure-form">
-				<fieldset>
-					<input type="quiz" placeholder="quiz" name="quiz" value={record.quiz} onChange={handleChange} />
-					<input type="name" placeholder="name" name="name" value={record.name} onChange={handleChange} />
-					<input type="score" placeholder="score" name="score" value={record.score} onChange={handleChange} />
-					<button type="submit" className="pure-button pure-button-primary" onClick={handleSubmit}>
-						Submit Score
-					</button>
-				</fieldset>
-			</form>
-			{/* Confitional Render based on state length*/}
+			{/* Confitional Render based on state length amp through array1-3*/}
 			<div className="row">
 				<div className="column">
 					<h1>React</h1>
@@ -59,14 +40,6 @@ function ScoreBoard() {
 				</div>
 				<div className="column">
 					<h1>Javascript</h1>
-					<li className="scores-li">User 1</li>
-					<li className="scores-li">User 2</li>
-					<li className="scores-li">User 3</li>
-					<li className="scores-li">User 4</li>
-					<li className="scores-li">User 5</li>
-				</div>
-				<div className="column">
-					<h1>Comp Sci</h1>
 					<li className="scores-li">User 1</li>
 					<li className="scores-li">User 2</li>
 					<li className="scores-li">User 3</li>

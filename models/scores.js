@@ -20,7 +20,7 @@ module.exports = function(sequelize, DataTypes) {
   });
 
     Scores.associate = models => {
-        Scores.belongsTo(models.User, {foreignKey: 'username'}),
+        Scores.belongsTo(models.User, {foreignKey: 'username', targetKey: 'username'}),
         Scores.belongsTo(models.Quizzes,  {foreignKey: 'topic_id'})
     }
 	
