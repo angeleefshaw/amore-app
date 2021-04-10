@@ -10,7 +10,7 @@ import ProtectedRoute from './Components/ProtectedRoute/ProtectedRoute';
 import ScoreBoard from './Components/ScoreBoard/ScoreBoard';
 
 function App() {
-	const [ authenticated, setAuthenticated ] = useState(true);
+	const [ authenticated, setAuthenticated ] = useState(false);
 
 	useEffect(
 		() => {
