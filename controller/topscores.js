@@ -5,7 +5,7 @@ module.exports = {
 	findScoresByTopic: function(req, res) {
 		db.Scores
 			.findAll({
-				where: { quiz: req.params.topic },
+				where: { topic_id: req.params.topic },
 				order: [ [ 'score', 'DESC' ] ],
 				limit: 5
 			})
