@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Logout from '../Logout/Logout';
 import './style.css';
 import API from '../../utils/API';
 
@@ -24,7 +25,8 @@ function ScoreBoard() {
 	console.log('react results: ', reactResults);
 
 	return (
-		<div>
+		<div className="scoreboard-page">
+			<Logout />
 			<h1 className="scores-header">Top 5</h1>
 			{/* Confitional Render based on state length amp through array1-3*/}
 			<div className="row">
