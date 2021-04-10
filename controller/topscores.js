@@ -3,10 +3,11 @@ const db = require('../models');
 // Defining methods
 module.exports = {
 	findScoresByTopic: function(req, res) {
-		console.log('find scores for js hit');
 		db.Scores
 			.findAll({
-				where: { quiz: req.params.topic }
+				where: { quiz: req.params.topic },
+				order: [ [ 'score', 'DESC' ] ],
+				limit: 5
 			})
 			.then((dbModel) => res.json(dbModel))
 			.catch((err) => {
