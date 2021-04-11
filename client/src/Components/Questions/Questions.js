@@ -88,7 +88,7 @@ class Questions extends Component {
           );
         })}
          <p className="score-tag">Your Score is :{this.state.score}</p>
-          <Button variant="outline-light" onClick={this.handleSubmit}>Submit</Button>
+          <Button variant="outline-dark" onClick={this.handleSubmit}>Submit</Button>
        
       </div>
     );
