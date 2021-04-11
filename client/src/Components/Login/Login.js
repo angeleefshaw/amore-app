@@ -64,14 +64,15 @@ function Login(props) {
 							onChange={(e) => setLoginPassword(e.target.value)}
 						/>
 					</div>
-					<Button className="btn" onClick={login}>
+					<Button variant="outline-dark" className="btn" onClick={login}>
 						Sign In
 					</Button>
+					<Link to="/">
+						<Button variant="outline-dark" className="fixed-bottom">Exit</Button>
+					</Link>
 				</fieldset>
 			</form>
-			<Link to="/">
-				<Button variant="outline-dark" className="fixed-bottom">Exit</Button>
-			</Link>
+			
 		</div>
 	);
 }
