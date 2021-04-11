@@ -64,9 +64,9 @@ function Login(props) {
 							onChange={(e) => setLoginPassword(e.target.value)}
 						/>
 					</div>
-					<button className="btn-primary-outline" onClick={login}>
+					<Button className="btn" onClick={login}>
 						Sign In
-					</button>
+					</Button>
 				</fieldset>
 			</form>
 			<Link to="/">
