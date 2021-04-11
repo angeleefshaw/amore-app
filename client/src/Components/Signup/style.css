@@ -6,3 +6,72 @@ h1 {
 	height: 30px;
 	margin: 10px;
 }
+
+
+.container {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	text-align: center;
+}
+
+.login-card {
+	margin-top: 250px ;
+	color: #941a80 ;
+    font-family: 'Source Code Pro', monospace; 
+}
+
+.login-header {
+	margin-bottom: 20px;
+}
+
+h3 {
+	color: #941a80 ;
+	font-size: 30px;
+	margin-bottom: 120px;
+	
+}
+
+.btn-primary-outline {
+	background-color: transparent;
+	border-radius: 6px;
+	margin-top: 10px;
+	height: 50px;
+	width: 90px;
+}
+
+.btn-primary-outline:hover {
+	background-color:rgb(221, 214, 214);
+}
+
+
+.pure-control-group {
+	font-size: 20px;
+
+}
+
+.inputName {
+	background-color: #481f86;
+	
+}
+
+.inputPass {
+	background-color: #481f86;
+}
+
+fieldset {
+	border: none !important;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.pure-control-group {
+	margin: 5px;
+}
+
+#aligned-name,
+#aligned-password {
+	height: 30px;
+	margin: 10px;
+}

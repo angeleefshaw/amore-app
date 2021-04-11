@@ -36,8 +36,8 @@ function Signup() {
 	}
 
 	return (
-		<div>
-			<h1>New User? Sign up here</h1>
+		<div className="login-card">
+			<h1  className="login-header">Sign up here</h1>
 			<form className="pure-form pure-form-aligned">
 				<fieldset>
 					<div className="pure-control-group">
@@ -58,9 +58,9 @@ function Signup() {
 							onChange={(e) => setRegisterPassword(e.target.value)}
 						/>
 					</div>
-					<Button variant="outline-dark" onClick={register}>
+					<button className="btn-primary-outline-2" onClick={register}>
 						Let's Go!
-					</Button>
+					</button>
 				</fieldset>
 			</form>
 			<Link to="/">

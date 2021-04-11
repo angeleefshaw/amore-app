@@ -1,80 +1,83 @@
 
 
 * {
-    background-color: #1a033d
+    background-color: #fafafa;
 }
 
 
-.main-header {
+.header {
+    font-size: 70px;
+    font-weight: 1200;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	text-align: center;
-	height: 400px;
-	color: #E47676 ;
+	height: 350px;
+	color: #941a80 ;
     font-family: 'Source Code Pro', monospace;
-    border-style: solid;
-    border-color: #f3b42b;
-    border-radius: 12px;
-    border-width: .5px;
+    border-radius: 8px;
+    
+}
+
+.jumbo-container {
+    border-radius: 10px;
+    
 }
 
 .box {
-	
+/* 	
     box-shadow:
     0 2.8px 2.2px rgba(0, 0, 0, 0.034),
     0 6.7px 5.3px rgba(0, 0, 0, 0.048),
     0 12.5px 10px rgba(0, 0, 0, 0.06),
     0 22.3px 17.9px rgba(0, 0, 0, 0.072),
     0 41.8px 33.4px rgba(53, 36, 36, 0.086),
-    0 100px 80px rgba(0, 0, 0, 0.12)
-  ;
+    0 100px 80px rgba(243, 243, 243, 0.12)
+  ; */
   
-    
-    
     min-height: 200px;
-    width: 50vw;
+    width: 45vw;
     margin: 100px auto;
-    border-radius: 5px;
+    border-radius: 12px;
+
   
 }
 
 .landing-intro {
-color: #E47676;
+color: #941a80 ;
 font-family: 'Source Code Pro', monospace;
-font-size: 19px;
+font-size: 22px;
+font-weight: 550;
 display: flex;
 justify-content: center;
 text-align: center;
-padding: 32px;
-border-style: solid;
-border-radius: 12px;
-/* border-color: #f3b42b; */
-border-width: .5px;
-
-
-box-shadow:
-0 2.8px 2.2px rgba(0, 0, 0, 0.034),
-0 6.7px 5.3px rgba(0, 0, 0, 0.048),
-0 12.5px 10px rgba(0, 0, 0, 0.06),
-0 22.3px 17.9px rgba(0, 0, 0, 0.072),
-0 41.8px 33.4px rgba(53, 36, 36, 0.086),
-0 100px 80px rgba(0, 0, 0, 0.12)
-;
-
-
-
+padding: 20px;
 min-height: 100px;
 width: 50vw;
 margin: 100px auto;
 
-
 }
 
-.landing-intro:hover {
-border-color: #f3b42b;
-border-width: 1.5px;
-color: #f3b42b;
-background-color: #1F024C
+
+.navbar-li {
+	list-style: none;
+	display: flex;
+	flex-direction: row;
+	margin: 15px;
+	padding: 10px;
+	justify-content: flex-end;
+	font-family: 'Source Code Pro', monospace;
+}
+
+.navbar-li a {
+	color: #333131 ;
+	margin-right: 30px;
+	font-size: 1.25rem;
+    font-weight: 600;
+	text-decoration: none;
+}
+
+.navbar-li a:hover {
+	text-decoration: none;
 }
 
