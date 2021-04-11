@@ -70,7 +70,7 @@ function Login(props) {
 				</fieldset>
 			</form>
 			<Link to="/">
-				<Button variant="outline-light" className="fixed-bottom">Exit</Button>
+				<Button variant="outline-dark" className="fixed-bottom">Exit</Button>
 			</Link>
 		</div>
 	);

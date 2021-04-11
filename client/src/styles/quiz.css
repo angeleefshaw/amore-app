@@ -4,6 +4,22 @@ body {
 
 .container {
   font-family:'Courier New', Courier, monospace;
-  color: white;
-  background-color: #1a033d;
+}
+
+.score-tag{
+  font-size: 30px;
+  text-shadow: 5px 5px 5px darkgray
+}
+
+.list-group-item {
+  color: #1a033d !important; 
+  cursor: pointer;
+}
+
+.list-group-item:hover {
+  background-color:#E8E8E8;
+}
+
+.list-group {
+  border-radius: 12px;
 }
