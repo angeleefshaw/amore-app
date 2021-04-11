@@ -1,28 +1,25 @@
 import React from "react";
 import {Link} from "react-router-dom";
+import Button from 'react-bootstrap/Button';
 
 function Topic () {
 return(
   <div>
     <div className = "quiz-btn-container">
     <Link to="/quiz/3">
-          <button className="quiz-btn">
+          <Button className= "qz-btn" variant="outline-dark">
             React
-          </button>
+          </Button>
       </Link>
    
       <Link to="/quiz/2">
-          <button className="quiz-btn" >
+          <Button className="qz-btn" variant="outline-dark"  >
             Node.js
-
-            
-          </button>
+          </Button>
       </Link>
         
       <Link to="/quiz/1">
-          <button className="quiz-btn">
-            Javascript
-          </button>
+          <Button className="qz-btn" variant="outline-dark" >Javascript</Button>
       </Link>
 
     </div>

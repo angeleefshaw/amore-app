@@ -43,7 +43,7 @@ function Login(props) {
 
 	return (
 		<div className="login-card">
-			<h1>User Sign In</h1>
+			<h1 className="login-header">User Sign In</h1>
 			<form className="pure-form pure-form-aligned">
 				<fieldset>
 					<div className="pure-control-group">
@@ -64,13 +64,13 @@ function Login(props) {
 							onChange={(e) => setLoginPassword(e.target.value)}
 						/>
 					</div>
-					<Button variant="outline-dark" onClick={login}>
+					<Button className="btn" onClick={login}>
 						Sign In
 					</Button>
 				</fieldset>
 			</form>
 			<Link to="/">
-				<Button variant="outline-light" className="fixed-bottom">Exit</Button>
+				<Button variant="outline-dark" className="fixed-bottom">Exit</Button>
 			</Link>
 		</div>
 	);

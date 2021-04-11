@@ -7,17 +7,45 @@
 
 .login-card {
 	margin-top: 250px ;
-	color:honeydew; 
+	color: #941a80 ;
     font-family: 'Source Code Pro', monospace; 
 }
 
+.login-header {
+	margin-bottom: 20px;
+}
+
 h3 {
-	color: honeydew;
+	color: #941a80 ;
 	font-size: 30px;
-	margin-bottom: 80px;
+	margin-bottom: 120px;
 	
 }
 
+.btn {
+	background-color: transparent;
+	border-radius: 6px;
+	margin-top: 10px;
+	height: 50px;
+	width: 90px;
+}
+
+.btn-primary-outline-2 {
+	background-color: transparent;
+	border-radius: 6px;
+	margin-top: 10px;
+	height: 50px;
+	width: 110px;
+	 
+} 
+
+.btn-primary-outline:hover {
+	background-color:rgb(221, 214, 214);
+}
+
+.btn-primary-outline-2:hover {
+	background-color:rgb(221, 214, 214);
+}
 
 .pure-control-group {
 	font-size: 20px;
@@ -31,14 +59,6 @@ h3 {
 
 .inputPass {
 	background-color: #481f86;
-}
-
-button {
-	background-color: rgb(234, 240, 234);
-	color: black;
-	margin-top: 80px;
-	height: 50px;
-	width: 90px;
 }
 
 fieldset {
