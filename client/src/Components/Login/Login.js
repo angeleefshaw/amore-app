@@ -13,12 +13,14 @@ function Login(props) {
 
 	useEffect(
 		() => {
+			console.log(authenticated);
 			console.log(redirect);
 		},
 		[ redirect ]
 	);
 
-	const login = () => {
+	const login = (event) => {
+		event.preventDefault();
 		axios
 			.post('/api/login', {
 				username: loginUsername,
@@ -68,11 +70,12 @@ function Login(props) {
 						Sign In
 					</Button>
 					<Link to="/">
-						<Button variant="outline-dark" className="fixed-bottom">Exit</Button>
+						<Button variant="outline-dark" className="fixed-bottom">
+							Exit
+						</Button>
 					</Link>
 				</fieldset>
 			</form>
-			
 		</div>
 	);
 }

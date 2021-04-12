@@ -1,24 +1,15 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { useState } from 'react';
 import Main from './Pages/Main';
 import Landing from './Pages/Landing';
 import Quiz from './Pages/Quiz';
 import Login from './Components/Login/Login';
 import Signup from './Components/Signup/Signup';
-import ProtectedRoute from './Components/ProtectedRoute/ProtectedRoute';
 import ScoreBoard from './Components/ScoreBoard/ScoreBoard';
-import Axios from 'axios';
 
 function App() {
 	const [ authenticated, setAuthenticated ] = useState(false);
-
-	// useEffect(
-	// 	() => {
-	// 		Axios.get('/api/user_data').then();
-	// 	},
-	// 	[ authenticated ]
-	// );
 
 	return (
 		<Router>
