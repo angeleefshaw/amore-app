@@ -11,7 +11,7 @@ function Main() {
 	return (
 		<div className="main">
 			<div className="main-heading-links">
-				<Link className="view-score-link" to="/view-scores">
+				<Link className="view-score-link" to="/scoreboard">
 					High Scores
 				</Link>
 				<Logout />

@@ -20,30 +20,30 @@ function ScoreBoard(props) {
 	return (
 		<div className="scoreboard-page">
 			<Logout {...props} />
-			<h1 className="scores-header">Top 5</h1>
+			<h1 className="scores-header">Top Scores</h1>
 			{/* Confitional Render based on state length amp through array1-3*/}
 			<div className="row">
 				<div className="column">
-					<h1>React</h1>
+					<h1 className="scoreboard-header">React</h1>
 					{reactResults.map((result) => (
 						<li className="scores-li">
-							{result.username} {result.score}
+							<div className="score-info">{result.username} {result.score}</div>
 						</li>
 					))}
 				</div>
 				<div className="column">
-					<h1>Javascript</h1>
+					<h1 className="scoreboard-header">Javascript</h1>
 					{jsResults.map((result) => (
 						<li className="scores-li">
-							{result.username} {result.score}
+							<div className="score-info">{result.username} {result.score}</div>
 						</li>
 					))}
 				</div>
 				<div className="column">
-					<h1>Node.js</h1>
+					<h1 className="scoreboard-header">Node.js</h1>
 					{nodejsResults.map((result) => (
 						<li className="scores-li">
-							{result.username} {result.score}
+							<div className="score-info">{result.username} {result.score}</div>
 						</li>
 					))}
 				</div>
