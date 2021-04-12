@@ -16,7 +16,8 @@ function Signup() {
 		[ redirect ]
 	);
 
-	const register = () => {
+	const register = (event) => {
+		event.preventDefault();
 		axios
 			.post('/api/signup', {
 				username: registerUsername,
@@ -37,7 +38,7 @@ function Signup() {
 
 	return (
 		<div className="login-card">
-			<h1  className="login-header">Sign up here</h1>
+			<h1 className="login-header">Sign up here</h1>
 			<form className="pure-form pure-form-aligned">
 				<fieldset>
 					<div className="pure-control-group">
@@ -64,7 +65,9 @@ function Signup() {
 				</fieldset>
 			</form>
 			<Link to="/">
-				<Button variant="outline-light" className="fixed-bottom">Exit</Button>
+				<Button variant="outline-light" className="fixed-bottom">
+					Exit
+				</Button>
 			</Link>
 		</div>
 	);
