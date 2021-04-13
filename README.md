@@ -40,7 +40,7 @@ Questions?
 
 * Audrey Bissiere-Grote, abissieregrote@gmail.com
 * Angelee Shaw, angeleefshaw@gmail.com 
-* Andree B
+* Andree Dantzler, andree.balayssac@icloud.com
 
 ## Thanks
 Thank you for reviewing our application, we hope it was useful to you!
