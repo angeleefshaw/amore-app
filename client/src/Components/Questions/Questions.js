@@ -10,6 +10,7 @@ class Questions extends Component {
     super(props);
     this.state = {
       questions: [],
+      currentQuestionsIndex : 0,
       score: 0,
     };
   }
@@ -67,7 +68,10 @@ class Questions extends Component {
   render() {
     return (
       <div className="mt-5 mb-5">
-        {this.state.questions.map((question, index) => {
+          <div>
+            {this.state.question[this.state.currentQuestionIndex].question}
+          </div>
+        {/* {this.state.questions.map((question, index) => {
           return (
             <div key={index} className="mb-5">
               <h2>{question.question}</h2>
@@ -86,7 +90,7 @@ class Questions extends Component {
               </ListGroup>
             </div>
           );
-        })}
+        })} */}
          <p className="score-tag">Your Score is :{this.state.score}</p>
           <Button variant="outline-light" onClick={this.handleSubmit}>Submit</Button>
        
