@@ -13,12 +13,14 @@ function Login(props) {
 
 	useEffect(
 		() => {
+			console.log(authenticated);
 			console.log(redirect);
 		},
 		[ redirect ]
 	);
 
-	const login = () => {
+	const login = (event) => {
+		event.preventDefault();
 		axios
 			.post('/api/login', {
 				username: loginUsername,
@@ -43,7 +45,7 @@ function Login(props) {
 
 	return (
 		<div className="login-card">
-			<h1>User Sign In</h1>
+			<h1 className="login-header">User Sign In</h1>
 			<form className="pure-form pure-form-aligned">
 				<fieldset>
 					<div className="pure-control-group">
@@ -64,14 +66,16 @@ function Login(props) {
 							onChange={(e) => setLoginPassword(e.target.value)}
 						/>
 					</div>
-					<Button variant="outline-dark" onClick={login}>
+					<Button variant="outline-dark" className="btn" onClick={login}>
 						Sign In
 					</Button>
+					<Link to="/">
+						<Button variant="outline-dark" className="fixed-bottom">
+							Exit
+						</Button>
+					</Link>
 				</fieldset>
 			</form>
-			<Link to="/">
-				<Button variant="outline-light" className="fixed-bottom">Exit</Button>
-			</Link>
 		</div>
 	);
 }

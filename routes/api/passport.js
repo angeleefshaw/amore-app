@@ -21,19 +21,26 @@ app.post('/signup', function(req, res) {
 			username: req.body.username,
 			password: req.body.password
 		})
-		.then(function() {
+		.then(function(data) {
 			//redirect user to login
-			res.status(200).json({ msg: 'user created' });
+			console.log('signup success');
+			return res.json(data);
 		})
 		.catch(function(err) {
+			console.log(err);
 			res.status(401).json(err);
 		});
 });
 
 // Route for logging user out
 app.get('/logout', function(req, res) {
-	req.logout();
-	res.redirect('/');
+	req.session.destroy((err) => {
+		if (err) return next(err);
+
+		req.logout();
+
+		res.sendStatus(200);
+	});
 });
 
 module.exports = app;

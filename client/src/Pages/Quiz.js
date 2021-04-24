@@ -17,7 +17,7 @@ function Quiz() {
 				<Questions topic={id} />
 			</Container>
 			<Link to="/main">
-          <Button variant="outline-light" className="fixed-bottom ml-4 mb-4 button">Exit Quiz</Button>
+          <Button variant="outline-dark" className="fixed-bottom ml-4 mb-4 button">Exit Quiz</Button>
         </Link>
 		</div>
 	);

@@ -6,6 +6,10 @@
 	height: 100px;
 }
 
+.scores-header {
+	font-family: 'Source Code Pro', monospace;
+}
+
 input {
 	height: 25px;
 	margin: 10px;
@@ -16,6 +20,7 @@ input {
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: space-around;
+	margin-top: 100px;
 }
 
 .column {
@@ -26,13 +31,33 @@ input {
 .scores-li {
 	list-style: none;
 	text-align: center;
+	justify-content: center;
 	align-content: center;
 	width: 225px;
-	height: 75px;
-	border: 2px solid pink;
-	border-radius: 80px / 80px;
+	border: 2px solid rgb(49, 48, 48);
+	border-radius: 6px;
+	margin-top: 15px;
+	font-family: 'Source Code Pro', monospace;
 }
 
 li.scores-li:hover {
 	transform: scale(1.1);
+	
+}
+
+.scoreboard-header {
+	color: #941a80 ;
+    font-family: 'Source Code Pro', monospace;
+	font-size: 22px;
+	font-weight: 400;
+}
+
+.score-info {
+	justify-content: center;
+	border-radius: 8px;
+	padding: 20px;
+}
+
+.score-info:hover {
+	background-color: #fff;
 }

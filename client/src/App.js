@@ -1,23 +1,15 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { useState } from 'react';
 import Main from './Pages/Main';
 import Landing from './Pages/Landing';
 import Quiz from './Pages/Quiz';
 import Login from './Components/Login/Login';
 import Signup from './Components/Signup/Signup';
-import ProtectedRoute from './Components/ProtectedRoute/ProtectedRoute';
 import ScoreBoard from './Components/ScoreBoard/ScoreBoard';
 
 function App() {
-	const [ authenticated, setAuthenticated ] = useState(true);
-
-	useEffect(
-		() => {
-			console.log('User authenticated? ', authenticated);
-		},
-		[ authenticated ]
-	);
+	const [ authenticated, setAuthenticated ] = useState(false);
 
 	return (
 		<Router>
@@ -35,7 +27,7 @@ function App() {
 					exact={true}
 					path="/main"
 					authenticated={authenticated}
-					component={authenticated ? Main : Login}
+					component={authenticated ? () => <Main setAuthenticated={setAuthenticated} /> : Login}
 				/>
 				<Route
 					exact={true}
@@ -47,7 +39,7 @@ function App() {
 					exact={true}
 					path="/scoreboard"
 					authenticated={authenticated}
-					component={authenticated ? ScoreBoard : Login}
+					component={authenticated ? () => <ScoreBoard setAuthenticated={setAuthenticated} /> : Login}
 				/>
 			</Switch>
 		</Router>
