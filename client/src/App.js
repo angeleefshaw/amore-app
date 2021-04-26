@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { useState } from 'react';
 import Main from './Pages/Main';
@@ -7,9 +7,26 @@ import Quiz from './Pages/Quiz';
 import Login from './Components/Login/Login';
 import Signup from './Components/Signup/Signup';
 import ScoreBoard from './Components/ScoreBoard/ScoreBoard';
+import axios from 'axios';
 
 function App() {
 	const [ authenticated, setAuthenticated ] = useState(false);
+	const [ username, setUsername ] = useState('');
+
+	useEffect(() => {
+		axios
+			.get('/api/user_data')
+			.then((response) => {
+				setUsername(response.data.username);
+			})
+			.catch((error) => {
+				console.log(error);
+			});
+	});
+
+	if (username) {
+		console.log('active user');
+	}
 
 	return (
 		<Router>
@@ -27,7 +44,9 @@ function App() {
 					exact={true}
 					path="/main"
 					authenticated={authenticated}
-					component={authenticated ? () => <Main setAuthenticated={setAuthenticated} /> : Login}
+					component={
+						authenticated ? () => <Main setAuthenticated={setAuthenticated} username={username} /> : Login
+					}
 				/>
 				<Route
 					exact={true}

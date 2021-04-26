@@ -16,7 +16,6 @@ function ScoreBoard(props) {
 		});
 	}, []);
 
-
 	return (
 		<div className="scoreboard-page">
 			<Logout {...props} />
@@ -26,24 +25,30 @@ function ScoreBoard(props) {
 				<div className="column">
 					<h1 className="scoreboard-header">React</h1>
 					{reactResults.map((result) => (
-						<li className="scores-li">
-							<div className="score-info">{result.username} {result.score}</div>
+						<li className="scores-li" key={result.id}>
+							<div className="score-info">
+								{result.username} {result.score}
+							</div>
 						</li>
 					))}
 				</div>
 				<div className="column">
 					<h1 className="scoreboard-header">Javascript</h1>
 					{jsResults.map((result) => (
-						<li className="scores-li">
-							<div className="score-info">{result.username} {result.score}</div>
+						<li className="scores-li" key={result.id}>
+							<div className="score-info">
+								{result.username} {result.score}
+							</div>
 						</li>
 					))}
 				</div>
 				<div className="column">
 					<h1 className="scoreboard-header">Node.js</h1>
 					{nodejsResults.map((result) => (
-						<li className="scores-li">
-							<div className="score-info">{result.username} {result.score}</div>
+						<li className="scores-li" key={result.id}>
+							<div className="score-info">
+								{result.username} {result.score}
+							</div>
 						</li>
 					))}
 				</div>
