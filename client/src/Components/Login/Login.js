@@ -27,7 +27,6 @@ function Login(props) {
 				password: loginPassword
 			})
 			.then((response) => {
-				console.log(response);
 				if (response.status === 200) {
 					props.setAuthentication(true);
 					setRedirect(true);
