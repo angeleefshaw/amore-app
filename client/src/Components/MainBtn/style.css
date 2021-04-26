@@ -1,0 +1,13 @@
+.maintbtn {
+	text-decoration: none;
+	color: rgb(32, 25, 25);
+	font-family: 'Source Code Pro', monospace;
+	font-size: 20px;
+	padding: 5px;
+	border: none;
+}
+
+.maintbtn:hover {
+	text-decoration: none;
+	color: rgb(32, 25, 25);
+}
