@@ -19,4 +19,4 @@ INSERT INTO quizzes (topic_id, topic_name)
 VALUES (3, 'react');
 
 INSERT INTO quizquizzeszes (topic_id, topic_name)
-VALUES (4, 'CS-basics');
+VALUES (4, 'Amazon Web Services');

@@ -4,6 +4,7 @@ import { ListGroup, Button, PageItem } from "react-bootstrap";
 import { withRouter } from "react-router-dom";
 import API from "../../utils/API";
 
+
 class Questions extends Component {
   constructor(props) {
     console.log(props);
@@ -67,7 +68,7 @@ class Questions extends Component {
     const { questions, currentQuestionIndex } = this.state;
     if (questions[currentQuestionIndex]) {
       return (
-        <div className="mt-5 mb-5">
+        <div className="mt-5 mb-5 question-container">
           <div className="mb-5">
             <h2>{questions[currentQuestionIndex].question}</h2>
             <ListGroup>
@@ -88,7 +89,7 @@ class Questions extends Component {
       );
     } else if (questions.length > 0 && currentQuestionIndex > questions.length - 1) {
       return (
-        <div className="mt-5 mb-5">
+        <div className="mt-5 mb-5 question-container">
           <p>{this.state.score > 7 ? "Great job!" : "Nice try!"}</p>
           <p className="score-tag">Your Score is: {this.state.score}</p>
 
