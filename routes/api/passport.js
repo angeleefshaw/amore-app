@@ -43,4 +43,20 @@ app.get('/logout', function(req, res) {
 	});
 });
 
+// Route to access client data
+app.get('/user_data', function(req, res) {
+	if (!req.user) {
+		// The user is not logged in, send back an empty object
+		res.json({});
+		console.log('user data not available hit');
+	} else {
+		// Otherwise send back the user's username
+		console.log(
+			res.json({
+				username: req.user.username
+			})
+		);
+	}
+});
+
 module.exports = app;

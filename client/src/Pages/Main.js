@@ -16,6 +16,7 @@ function Main(props) {
 			</div>
 			<Jumbotron />
 			<div className="mainpage-quiz-intro-container">
+				<p>Welcome, {props.username}</p>
 				<p className="mainpage-quiz-intro">Prepare for your interview by selecting a quiz below.</p>
 			</div>
 			<Topic />
