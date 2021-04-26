@@ -6,11 +6,6 @@ function Topic () {
 return(
   <div>
     <div className = "quiz-btn-container">
-    <Link to="/quiz/3">
-          <Button className= "qz-btn" variant="outline-dark">
-            React
-          </Button>
-      </Link>
    
       <Link to="/quiz/2">
           <Button className="qz-btn" variant="outline-dark"  >
@@ -19,7 +14,21 @@ return(
       </Link>
         
       <Link to="/quiz/1">
-          <Button className="qz-btn" variant="outline-dark" >Javascript</Button>
+          <Button className="qz-btn" variant="outline-dark" >
+            Javascript
+            </Button>
+      </Link>
+
+      <Link to="/quiz/3">
+          <Button className= "qz-btn" variant="outline-dark">
+              React  
+          </Button>
+      </Link>
+
+      <Link to="/quiz/4">
+          <Button className="qz-btn" variant="outline-dark" >
+            AWS Devloper
+            </Button>
       </Link>
 
     </div>
